@@ -20,20 +20,19 @@ Sample Output :
   [11, -1]
 
 
-Notes: I dont think I need a reference to num. Maybe idk, my solution seemed to be much simpler that their solutions. 
+Notes: On2 time. not efficient. use hashtable.
 
 class Program {
   func twoNumberSum(_ array: inout [Int], _ targetSum: Int) -> [Int] {
           
-          var num = 0
+          
           var arr = [Int]()
 
           for x in array {
-            num = x
             for y in array {
-              if (num + y == targetSum) && (num != y) {
-                if !arr.contains(num) {
-                  arr.append(num)
+              if (x + y == targetSum) && (x != y) {
+                if !arr.contains(x) {
+                  arr.append(x)
                   arr.append(y)
                   break
                 }
